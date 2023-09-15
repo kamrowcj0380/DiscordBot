@@ -6,6 +6,15 @@ import sys
 
 import discord
 
-if (len(sys.argv) != 1):
-    print("Insert Token as command line argument. Only one argument is allowed")
 
+def main():
+    if (len(sys.argv) != 1):
+        print("Insert Token as command line argument. Only one argument is allowed")
+        sys.exit()
+    print("Hello World!")
+
+
+
+
+if __name__ == "__main__":
+    main()
