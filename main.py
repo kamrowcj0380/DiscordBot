@@ -5,14 +5,25 @@ import os
 import sys
 
 import discord
+from dotenv import load_dotenv
+
 
 
 def main():
-    if (len(sys.argv) != 1):
-        print("Insert Token as command line argument. Only one argument is allowed")
-        sys.exit()
     print("Hello World!")
 
+    load_dotenv()
+    TOKEN = os.getenv('DISCORD_TOKEN')
+
+    intents = discord.Intents.default()
+    client = discord.Client(intents=intents)
+
+    @client.event
+    async def on_ready():
+        print(f'{client.user} has connected to Discord!')
+
+
+    client.run(TOKEN)
 
 
 
