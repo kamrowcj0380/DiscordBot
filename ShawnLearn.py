@@ -11,7 +11,7 @@ from Log import Log
 Log(__file__)
 
 logger = logging.getLogger(__name__)
-TOKEN = 'NjQ4NzE2NDE2ODE1NzI2NjAy.XdySPg.MX7Ym4YTyuMqEQ82DHkD6wS-SF0'
+TOKEN = 'your token here'
 database = Database('ShawnBrain')
 
 class ShawnLearns(discord.Client):
